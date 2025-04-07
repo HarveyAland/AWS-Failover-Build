@@ -20,6 +20,11 @@ Please see the attached PDF for a comprehensive breakdown of the project, includ
 ✅ Design a real-world, production-grade solution to showcase advanced AWS cloud engineering skills
 
 
+
+
+
+
+
 🧱 Architecture Overview
 
 Component	Primary Region (us-east-1)	Failover Region (us-west-2)
@@ -31,6 +36,7 @@ Route 53	Health checks & failover routing	Receives traffic if primary fails
 CloudWatch Alarms	✅	✅
 SNS Notifications	✅	✅
 Note: RDS is not regionally replicated. It is configured for automatic failover within the primary region using the Multi-AZ deployment option.
+
 
 
 ⚙️ Technologies Used
@@ -50,6 +56,7 @@ AWS CloudWatch + SNS (Monitoring & Alerts)
 AWS Lambda 
 
 
+
 🔁 Failover Strategy
 
 Route 53 Health Checks monitor the primary region's ALB.
@@ -64,7 +71,6 @@ RDS uses Multi-AZ for automatic failover between availability zones within us-ea
 
 
 
-
 🔐 Security & Compliance
 
 IAM roles are restricted with least privilege policies.
@@ -74,6 +80,7 @@ KMS is used for backup encryption.
 Resources are tagged for visibility and compliance (e.g., Environment, Owner, CostCenter).
 
 Private subnets and NAT Gateways protect backend resources.
+
 
 
 🧪 Post-Deployment Testing
@@ -92,7 +99,6 @@ Private subnets and NAT Gateways protect backend resources.
 
 
 
-
 📚 Lessons Learned
 
 Built expertise in multi-region AWS architecture.
@@ -102,9 +108,12 @@ Learned how to monitor and route traffic based on real-time health.
 Implemented RDS Multi-AZ failover for database high availability within a single region.
 
 
+
 🏁 Status
+
 ✅ Completed and tested
 🧹 Resources have been torn down post-verification to avoid charges.
+
 
 
 📎 Related Projects
@@ -112,6 +121,7 @@ Implemented RDS Multi-AZ failover for database high availability within a single
 Dockerized Flask App with CI/CD on ECS Fargate
 
 Cloud Resume Challenge
+
 
 
 🙌 Acknowledgements
